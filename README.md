@@ -6,6 +6,32 @@ Some of the contents
 - QRS Classifiers: Gradl et al., Leutheuser et al., Tsipouras et al., naive physiological classifier
 - Loading methods for text-based or binary ECG file formats like PhysioNET files, CustoMeds binary ECG file or CSV.
 
+## Usage Examples
+This is a very basic example of how to load an ECG from a file and detect all R-peak locations
+```java
+// Load BinaryEcg file, the proprietary file format of the JELY...
+Ecg ecgFile = FileLoader.LoadKnownEcgFile('some_random_ecg.BinaryEcg');
+
+// ... or load csv-based ECG, e.g. single column just voltage values, with a known sampling rate of 1024 Hz
+ecgFile = FileLoader.LoadKnownEcgFile('some_random_csv_ecg.csv', LeadConfiguration.SINGLE_UNKNOWN_LEAD, 1024);
+
+// Initiate the default heartbeat detector
+HeartbeatDetector detector = new HeartbeatDetector( ecgFile, null );
+// and extract all heartbeats
+ArrayList<Heartbeat> beatList = detector.findHeartbeats();
+
+for(int i=1; i<beatList.size(); i++) {
+    Heartbeat heartbeat = beatList.get(i);
+    QrsComplex qrs = heartbeat.getQrs();
+    int rPeak = qrs.getRPosition();
+}
+```
+
+If you want to extract an array of signal values, you can call
+```java
+double[] signal = ecgFile.getSignalFromIndex(0).toDoubleArray();
+```
+
 # EcgEditor
 The EcgEditor is a subproject of the JELY. It used this library to provide a graphical user interface (GUI) for viewing and annotating ECG signals.
 
