@@ -1,9 +1,20 @@
 /**
- * Copyright (C) 2015 Digital Sports Group, Pattern Recognition Lab, Friedrich-Alexander University Erlangen-N�rnberg (FAU).
- *
- * This file is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * This file is part of the JELY distribution (https://github.com/mad-lab-fau/JELY).
+ * Copyright (c) 2015-2020 Machine Learning and Data Analytics Lab, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).
+ * <p>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ * <p>
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * <p>
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.lme.ecglib.io;
+package de.fau.mad.jely.io;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -19,16 +30,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import de.fau.lme.ecglib.Ecg;
-import de.fau.lme.ecglib.LeadConfiguration;
-import de.fau.lme.ecglib.annotations.AnnotationManager;
-import de.fau.lme.ecglib.annotations.SubjectInfo;
+import de.fau.mad.jely.Ecg;
+import de.fau.mad.jely.LeadConfiguration;
+import de.fau.mad.jely.annotations.AnnotationManager;
+import de.fau.mad.jely.annotations.SubjectInfo;
 
 /**
  * This class represents an ECG that exists in a binary format on long-term
  * storage.
  * 
- * @author gradl
+ * @author Stefan Gradl
  *
  */
 public class BinaryEcgFile extends Ecg {

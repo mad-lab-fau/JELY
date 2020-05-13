@@ -16,7 +16,7 @@
  */
 package de.fau.mad.jely.detectors;
 
-import de.fau.mad.jely.Outlier;
+import de.fau.mad.jely.util.Outlier;
 import de.fau.mad.jely.RRInterval;
 
 import java.util.ArrayList;

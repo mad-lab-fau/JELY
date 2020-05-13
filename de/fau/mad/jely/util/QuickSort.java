@@ -1,4 +1,4 @@
-package de.fau.mad.jely;
+package de.fau.mad.jely.util;
 
 public class QuickSort {
     /*-

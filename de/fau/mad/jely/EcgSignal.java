@@ -1,9 +1,20 @@
 /**
- * Copyright (C) 2015 Digital Sports Group, Pattern Recognition Lab, Friedrich-Alexander University Erlangen-Nürnberg (FAU).
- *
- * This file is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * This file is part of the JELY distribution (https://github.com/mad-lab-fau/JELY).
+ * Copyright (c) 2015-2020 Machine Learning and Data Analytics Lab, Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU).
+ * <p>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ * <p>
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * <p>
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.lme.ecglib;
+package de.fau.mad.jely;
 
 import java.util.Collection;
 import java.util.Date;
@@ -11,8 +22,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-import de.fau.lme.ecglib.detectors.QrsDetector;
-import de.fau.lme.ecglib.filter.DigitalFilter;
+import de.fau.mad.jely.detectors.QrsDetector;
+import de.fau.mad.jely.filter.DigitalFilter;
 import de.fau.shiftlist.*;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 

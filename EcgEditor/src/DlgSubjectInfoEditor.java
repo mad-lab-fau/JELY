@@ -28,8 +28,8 @@ import javax.swing.JSpinner;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
-import de.fau.lme.ecglib.annotations.SubjectInfo;
-import de.fau.lme.ecglib.annotations.SubjectSex;
+import de.fau.mad.jely.annotations.SubjectInfo;
+import de.fau.mad.jely.annotations.SubjectSex;
 
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;

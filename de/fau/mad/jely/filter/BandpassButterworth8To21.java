@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.lme.ecglib.filter;
+package de.fau.mad.jely.filter;
 
 /**
  * A bandpass butterworth filter implementation using a frequency-coefficient table to accommodate for different sampling frequencies.

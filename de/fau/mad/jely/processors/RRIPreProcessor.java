@@ -18,6 +18,8 @@ package de.fau.mad.jely.processors;
 
 import de.fau.mad.jely.*;
 import de.fau.mad.jely.detectors.OutlierDetector;
+import de.fau.mad.jely.hrv.RRIntervalCalculator;
+import de.fau.mad.jely.util.*;
 
 import java.util.ArrayList;
 

@@ -14,8 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely;
+package de.fau.mad.jely.hrv;
 
+import de.fau.mad.jely.Heartbeat;
 import de.fau.mad.jely.Ecg;
 import de.fau.mad.jely.detectors.HeartbeatDetector;
 import de.fau.mad.jely.detectors.QrsDetector;
