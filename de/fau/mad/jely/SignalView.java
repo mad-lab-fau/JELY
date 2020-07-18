@@ -21,7 +21,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  * A view onto an ECG Signal.
@@ -56,27 +55,27 @@ public class SignalView implements List<Double> {
 
     @Override
     public boolean add(Double arg0) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void add(int arg0, Double arg1) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean addAll(Collection<? extends Double> arg0) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean addAll(int arg0, Collection<? extends Double> arg1) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void clear() {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -134,27 +133,27 @@ public class SignalView implements List<Double> {
 
     @Override
     public boolean remove(Object arg0) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public Double remove(int arg0) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean removeAll(Collection<?> arg0) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean retainAll(Collection<?> arg0) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public Double set(int arg0, Double arg1) {
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException();
     }
 
     @Override

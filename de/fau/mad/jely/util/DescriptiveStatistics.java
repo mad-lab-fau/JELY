@@ -20,7 +20,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**
  * Descriptive statistics for <code>List</code>-based collections of values.

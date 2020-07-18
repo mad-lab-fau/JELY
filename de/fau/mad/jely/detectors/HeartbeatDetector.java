@@ -73,7 +73,7 @@ public class HeartbeatDetector {
      */
     public HeartbeatDetector(Ecg ecg, QrsDetector qrsDetector, PWaveDetector pWaveDetector, TWaveDetector tWaveDetector,
                              HeartbeatDetectionListener heartbeatListener) {
-        init(ecg, new ElgendiFastQrsDetector(ecg), pWaveDetector, tWaveDetector, heartbeatListener);
+        init(ecg, qrsDetector, pWaveDetector, tWaveDetector, heartbeatListener);
     }
 
     private void init(Ecg ecg, QrsDetector qrsDetector, PWaveDetector pWaveDetector, TWaveDetector tWaveDetector,
