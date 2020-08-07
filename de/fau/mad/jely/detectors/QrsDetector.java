@@ -99,33 +99,34 @@ public abstract class QrsDetector {
 
 		if (Ecglib.isDebugMode())
 			System.out.println("R-pos: " + qrs.getRPosition());
+		
+		mQrsList.add(qrs);
 
 		// set the next qrs of the previous qrs to this qrs, if a previous one
 		// is available
-		if (mQrsList.size() > 0) {
-			QrsComplex previousQrs = (QrsComplex) mQrsList.getHeadValue();
-
+		if (mQrsList.size() > 1) {
+			QrsComplex previousQrs = (QrsComplex) mQrsList.get(-1);
 			qrs.setPreviousQrs(previousQrs);
 			previousQrs.setNextQrs(qrs);
+		}
+		
+		// apply all post-processing for QRS complexes, this is always done
+		// for the previous QRS complex, so a
+		// real-time recorded
+		// signal contains enough samples for a thorough processing and each
+		// QRS complex has a previous and next one
+		// it can refer to.
+		for (PostProcessor postProcessor : mPostProcessors) {
+			if (postProcessor instanceof QrsDetectionPostProcessor) {
+				int output;
+				if (postProcessor instanceof RPeakRefinement)
+					output = ((QrsDetectionPostProcessor) postProcessor).process(qrs);
+				else
+					output = ((QrsDetectionPostProcessor) postProcessor).process(qrs.getPreviousQrs());
 
-			// apply all post-processing for QRS complexes, this is always done
-			// for the previous QRS complex, so a
-			// real-time recorded
-			// signal contains enough samples for a thorough processing and each
-			// QRS complex has a previous and next one
-			// it can refer to.
-			for (PostProcessor postProcessor : mPostProcessors) {
-				if (postProcessor instanceof QrsDetectionPostProcessor) {
-					int output;
-					if (postProcessor instanceof RPeakRefinement)
-						output = ((QrsDetectionPostProcessor) postProcessor).process(qrs);
-					else
-						output = ((QrsDetectionPostProcessor) postProcessor).process(previousQrs);
-
-					// write some debug output?
-					if (postProcessor instanceof RPeakRefinement && Ecglib.isDebugMode())
-						System.out.println("Refinement distance: " + output);
-				}
+				// write some debug output?
+				if (postProcessor instanceof RPeakRefinement && Ecglib.isDebugMode())
+					System.out.println("Refinement distance: " + output);
 			}
 		}
 	}

@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import de.fau.mad.jely.detectors.ElgendiFastQrsDetector;
 import de.fau.mad.jely.detectors.HeartbeatDetector;
 import de.fau.mad.jely.detectors.PanTompkinsDetector;
 import de.fau.mad.jely.detectors.QrsDetector;
@@ -11,6 +12,10 @@ import de.fau.mad.jely.io.FileLoader;
 
 public class JELY {
 
+	/**
+	 * Call this e.g. via "java -jar Jely.jar --ecgfile xxx.csv --samplingrate 500".
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		String ecgFile = null;
 		float samplingRate = 0f;
@@ -47,11 +52,12 @@ public class JELY {
 			
 			System.out.println("Loaded ECG: " + ecg);
 			
-			QrsDetector qrsDet = new PanTompkinsDetector(ecg);			
-			HeartbeatDetector detector = new HeartbeatDetector( ecg, qrsDet, null, null, null );
+			//QrsDetector det = new PanTompkinsDetector(ecg);
+			QrsDetector det = new ElgendiFastQrsDetector(ecg);
+			HeartbeatDetector detector = new HeartbeatDetector(ecg, det);
 			ArrayList<Heartbeat> beatList = detector.findHeartbeats();
 			
-			System.out.println("Found " + beatList.size() + " heartbeats using " + qrsDet);
+			System.out.println("Found " + beatList.size() + " heartbeats using " + detector.getQrsDetector());
 
 			try {
 				FileWriter myWriter = null;

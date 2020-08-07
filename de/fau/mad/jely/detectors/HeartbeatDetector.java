@@ -61,6 +61,16 @@ public class HeartbeatDetector {
     public HeartbeatDetector(Ecg ecg, HeartbeatDetectionListener heartbeatListener) {
         init(ecg, null, null, null, heartbeatListener);
     }
+    
+    /**
+     * Constructor specifying the QRS detector to use.
+     * 
+     * @param ecg
+     * @param qrsDetector
+     */
+    public HeartbeatDetector(Ecg ecg, QrsDetector qrsDetector) {
+        init(ecg, qrsDetector, null, null, null);
+    }
 
     /**
      * Constructor.
@@ -101,6 +111,14 @@ public class HeartbeatDetector {
 
         if (Ecglib.isDebugMode())
             System.out.println("HeatbeatDetector initiated " + mQrsDetector + "; " + mPWaveDetector + "; " + mTWaveDetector + "; " + mHeartbeatListener);
+    }
+    
+    /**
+     * 
+     * @return The QRS detector used in this HeartbeatDetector.
+     */
+    public QrsDetector getQrsDetector() {
+    	return mQrsDetector;
     }
 
     /**
