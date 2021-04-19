@@ -36,7 +36,7 @@ You can also run the compiled jar directly with java from the command-line e.g. 
 ```bash
 java -jar Jely.jar --ecgfile test_ecg.csv --samplingrate 500 --rout --rfile rpeaks.csv
 ```
-This will read the CSV file test_ecg with an single lead ECG sampled with 500 Hz and find all R-peaks using the default QRS detector and write the indices of the R-peaks to stdout as well as into the file rpeaks.csv.
+This will read the CSV file test_ecg with a single lead ECG sampled with 500 Hz and find all R-peaks using the default QRS detector and write the indices of the R-peaks to stdout as well as into the file rpeaks.csv.
 
 # EcgEditor
 The EcgEditor is a subproject of the JELY. It used this library to provide a graphical user interface (GUI) for viewing and annotating ECG signals.

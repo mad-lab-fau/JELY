@@ -159,6 +159,10 @@ public class HeartbeatDetector {
             beat.setTWave(mTWaveDetector.findTWave(mEcg, beat.getQrs()));
     }
 
+    /**
+     * Finds all heartbeats in the current ECG signal.
+     * @return ArrayList of Heatbeats
+     */
     public ArrayList<Heartbeat> findHeartbeats() {
         final ArrayList<Heartbeat> beatList = new ArrayList<Heartbeat>();
 
@@ -180,5 +184,22 @@ public class HeartbeatDetector {
         mHeartbeatListener = oldListener;
 
         return beatList;
+    }
+    
+    /**
+     * Convert an ArrayList of Heartbeats to an array of R-peak positions.
+     * @param beatList
+     * @return int-Array of R-peak indices.
+     */
+    public static int[] toPeakArray(ArrayList<Heartbeat> beatList) {
+    	int[] array = new int [beatList.size()];
+    	for (int i = 0; i < beatList.size(); i++) {
+			Heartbeat heartbeat = beatList.get(i);
+			QrsComplex qrs = heartbeat.getQrs();
+			int rPeakIndex = qrs.getRPosition();
+			array[i] = rPeakIndex;
+
+		}
+    	return array;
     }
 }
