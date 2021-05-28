@@ -6,6 +6,9 @@ Some of the contents
 - QRS Classifiers: Gradl et al., Leutheuser et al., Tsipouras et al., naive physiological classifier
 - Loading methods for text-based or binary ECG file formats like PhysioNET files, CustoMeds binary ECG file or CSV.
 
+## Required additional library
+The ShiftList package is required to compile the project. You can find it at https://github.com/mad-lab-fau/ShiftList
+
 ## Usage Examples
 This is a very basic example of how to load an ECG from a file and detect all R-peak locations
 ```java
