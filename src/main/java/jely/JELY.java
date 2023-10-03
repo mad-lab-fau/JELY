@@ -1,14 +1,13 @@
-package de.fau.mad.jely;
+package jely;
+
+import jely.detectors.ElgendiFastQrsDetector;
+import jely.detectors.HeartbeatDetector;
+import jely.detectors.QrsDetector;
+import jely.io.FileLoader;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
-import de.fau.mad.jely.detectors.ElgendiFastQrsDetector;
-import de.fau.mad.jely.detectors.HeartbeatDetector;
-import de.fau.mad.jely.detectors.PanTompkinsDetector;
-import de.fau.mad.jely.detectors.QrsDetector;
-import de.fau.mad.jely.io.FileLoader;
 
 public class JELY {
 

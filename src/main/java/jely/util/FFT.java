@@ -1,4 +1,4 @@
-package de.fau.mad.jely.util;
+package jely.util;
 /*
  * Free FFT and convolution (Java)
  *

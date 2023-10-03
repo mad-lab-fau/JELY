@@ -14,14 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.hrv;
+package jely.hrv;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import de.fau.mad.jely.util.*;
+import jely.util.Complex;
+import jely.util.FFT;
+import jely.util.Interpolator;
 
 /**
  * @author Stefan Gradl

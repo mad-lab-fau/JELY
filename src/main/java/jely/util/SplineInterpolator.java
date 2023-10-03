@@ -14,10 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.util;
-
-import de.fau.mad.jely.util.Matrix;
-import de.fau.mad.jely.RRInterval;
+package jely.util;
 
 /**
  * @author Axel Heinrich

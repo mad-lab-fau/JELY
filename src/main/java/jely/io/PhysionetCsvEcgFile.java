@@ -14,7 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.Ecg;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -22,10 +24,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.zip.GZIPInputStream;
-
-import de.fau.mad.jely.Ecg;
 
 /**
  * Loads a physionet file converted to csv.

@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
 
-import de.fau.mad.jely.Outlier;
-import de.fau.mad.jely.RRInterval;
+import jely.Outlier;
+import jely.RRInterval;
 
 import java.util.ArrayList;
 

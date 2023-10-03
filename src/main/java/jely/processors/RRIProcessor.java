@@ -14,11 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.processors;
+package jely.processors;
 
-import de.fau.mad.jely.*;
-import de.fau.mad.jely.hrv.*;
-import de.fau.mad.jely.util.*;
+import jely.Ecg;
+import jely.RRInterval;
+import jely.hrv.HRVFrequencyDomain;
+import jely.hrv.HRVTimeDomain;
 
 import java.util.ArrayList;
 import java.util.Collections;

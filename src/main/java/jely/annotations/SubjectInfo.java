@@ -14,7 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.annotations;
+package jely.annotations;
+
+import jely.Ecg;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -22,12 +24,8 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgLead;
 
 /**
  * Information about a subject for which an ECG was recorded.

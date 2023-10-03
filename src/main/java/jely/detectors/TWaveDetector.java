@@ -14,12 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
 
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgSignal;
-import de.fau.mad.jely.QrsComplex;
-import de.fau.mad.jely.TWave;
+import jely.Ecg;
+import jely.QrsComplex;
+import jely.TWave;
 
 /**
  * The interface that all T wave detectors have to implement.

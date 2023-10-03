@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
 
-import de.fau.mad.jely.Ecg;
+import jely.Ecg;
 
 public class EdfEcgFile extends Ecg {
     // TODO: Import EDF and EDF+ files.

@@ -14,12 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.processors;
+package jely.processors;
 
-import de.fau.mad.jely.*;
-import de.fau.mad.jely.detectors.OutlierDetector;
-import de.fau.mad.jely.hrv.RRIntervalCalculator;
-import de.fau.mad.jely.util.*;
+import jely.Ecg;
+import jely.Outlier;
+import jely.RRInterval;
+import jely.detectors.OutlierDetector;
+import jely.hrv.RRIntervalCalculator;
 
 import java.util.ArrayList;
 

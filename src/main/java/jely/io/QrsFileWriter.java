@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.QrsClass;
+import jely.QrsComplex;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import de.fau.mad.jely.QrsClass;
-import de.fau.mad.jely.QrsComplex;
 
 /**
  * Implements a file writer to save QRS complexes and classes.

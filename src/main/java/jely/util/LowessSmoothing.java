@@ -1,6 +1,4 @@
-package de.fau.mad.jely.util;
-
-import de.fau.mad.jely.util.QuickSort;
+package jely.util;
 
 public class LowessSmoothing {
     /*-

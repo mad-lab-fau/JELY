@@ -14,20 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
 
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgLead;
-import de.fau.mad.jely.EcgSignal;
-import de.fau.mad.jely.Heartbeat;
-import de.fau.mad.jely.PWave;
-import de.fau.mad.jely.QrsComplex;
-import de.fau.mad.jely.SignalView;
-import de.fau.mad.jely.TWave;
-import de.fau.mad.jely.filter.BandpassButterworth05To10;
-import de.fau.mad.jely.filter.DigitalFilter;
-import de.fau.mad.jely.util.DescriptiveStatistics;
-import de.fau.mad.jely.util.DescriptiveStatistics.IndexValue;
+import jely.*;
+import jely.filter.BandpassButterworth05To10;
+import jely.filter.DigitalFilter;
+import jely.util.DescriptiveStatistics;
 
 /**
  * A naive implementation looking for the P and T wave by just searching for the maximum amplitude value in a certain
@@ -120,7 +112,7 @@ public class NaivePtDetector implements PWaveDetector, TWaveDetector {
 
         // search for the max peak
         SignalView pSearchArea = sigFiltered.getSignalView(startSearch, stopSearch);
-        IndexValue iv;
+        DescriptiveStatistics.IndexValue iv;
 
         if (mUseAbsoluteMaximum)
             iv = DescriptiveStatistics.maxAbs(pSearchArea);
@@ -167,7 +159,7 @@ public class NaivePtDetector implements PWaveDetector, TWaveDetector {
 
         // search for the max peak
         SignalView pSearchArea = sigFiltered.getSignalView(startSearch, stopSearch);
-        IndexValue iv;
+        DescriptiveStatistics.IndexValue iv;
 
         if (mUseAbsoluteMaximum)
             iv = DescriptiveStatistics.maxAbs(pSearchArea);

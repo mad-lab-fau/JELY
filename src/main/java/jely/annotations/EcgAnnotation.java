@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.annotations;
+package jely.annotations;
+
+import jely.EcgLead;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-
-import de.fau.mad.jely.EcgLead;
 
 /**
  * Base annotation class.

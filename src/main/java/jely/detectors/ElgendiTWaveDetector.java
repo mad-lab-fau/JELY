@@ -15,18 +15,13 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.fau.mad.jely.detectors;
+package jely.detectors;
+
+import jely.*;
+import jely.filter.BandpassButterworth05To10;
+import jely.filter.DigitalFilter;
 
 import java.lang.Math;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgLead;
-import de.fau.mad.jely.EcgSignal;
-import de.fau.mad.jely.MutableEcgSignal;
-import de.fau.mad.jely.QrsComplex;
-import de.fau.mad.jely.TWave;
-import de.fau.mad.jely.filter.BandpassButterworth05To10;
-import de.fau.mad.jely.filter.DigitalFilter;
 
 /**
  * Implementation of Elgendis twave detector.

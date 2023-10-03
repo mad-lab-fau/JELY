@@ -14,16 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.classifiers;
+package jely.classifiers;
+
+import jely.BeatClass;
+import jely.Heartbeat;
+import jely.QrsClass;
+import jely.QrsComplex;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import de.fau.mad.jely.BeatClass;
-import de.fau.mad.jely.Heartbeat;
-import de.fau.mad.jely.PWave;
-import de.fau.mad.jely.QrsClass;
-import de.fau.mad.jely.QrsComplex;
 
 /**
  * Implements a physiological classifier purely based on ground-truth medical knowledge.

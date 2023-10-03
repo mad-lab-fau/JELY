@@ -14,18 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.Ecg;
+import jely.annotations.GeneralAnnotation;
 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Date;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.annotations.GeneralAnnotation;
 
 /**
  * Loads a physionet signal file.

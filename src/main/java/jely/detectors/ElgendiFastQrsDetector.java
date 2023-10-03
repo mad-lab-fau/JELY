@@ -14,28 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
 
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgLead;
-import de.fau.mad.jely.EcgSignal;
-import de.fau.mad.jely.Ecglib;
-import de.fau.mad.jely.LeadConfiguration;
-import de.fau.mad.jely.QrsComplex;
-import de.fau.mad.jely.filter.BandpassButterworth8To21;
-import de.fau.mad.jely.filter.DigitalFilter;
-import de.fau.mad.jely.filter.LmeFilter;
-import de.fau.mad.jely.filter.TimeDelayedFilterArray;
-import de.fau.mad.jely.processors.RPeakMaxRefinement;
-import de.fau.mad.jely.processors.RPeakRefinement;
-import de.fau.mad.jely.processors.RPeakSlacknessReduction;
-import de.fau.mad.jely.util.DescriptiveStatistics;
 import de.fau.shiftlist.*;
+import jely.*;
+import jely.filter.BandpassButterworth8To21;
+import jely.filter.DigitalFilter;
+import jely.filter.TimeDelayedFilterArray;
+import jely.processors.RPeakMaxRefinement;
+import jely.processors.RPeakSlacknessReduction;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**

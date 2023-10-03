@@ -14,16 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
+
+import de.fau.shiftlist.*;
+import jely.Ecg;
+import jely.Ecglib;
+import jely.Heartbeat;
+import jely.QrsComplex;
 
 import java.util.ArrayList;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.Ecglib;
-import de.fau.mad.jely.Heartbeat;
-import de.fau.mad.jely.QrsComplex;
-import de.fau.mad.jely.processors.RPeakMaxRefinement;
-import de.fau.shiftlist.*;
 
 /**
  * The default heartbeat detector.

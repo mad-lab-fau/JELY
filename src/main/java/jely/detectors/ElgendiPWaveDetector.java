@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
 
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.PWave;
-import de.fau.mad.jely.QrsComplex;
+import jely.Ecg;
+import jely.PWave;
+import jely.QrsComplex;
 
 public class ElgendiPWaveDetector implements PWaveDetector
 {
 
     @Override
-    public PWave findPWave( Ecg ecg, QrsComplex currentQrs )
+    public PWave findPWave(Ecg ecg, QrsComplex currentQrs )
     {
 	// TODO Auto-generated method stub
 	return null;

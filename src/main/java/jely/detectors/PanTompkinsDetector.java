@@ -14,22 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.detectors;
+package jely.detectors;
 
 import java.util.ArrayList;
 
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgSignal;
-import de.fau.mad.jely.QrsComplex;
-import de.fau.mad.jely.filter.LmeFilter;
-import de.fau.mad.jely.filter.LmeFilter.MinDetectionFilter;
-import de.fau.mad.jely.filter.LmeFilter.PeakDetectionFilter;
-import de.fau.mad.jely.filter.LmeFilter.StatFilter;
-import de.fau.mad.jely.filter.LmeFilter.WndIntFilter;
-import de.fau.mad.jely.filter.MeanFilter;
-import de.fau.mad.jely.util.DescriptiveStatistics;
 import de.fau.shiftlist.ShiftListDouble;
 import de.fau.shiftlist.ShiftListObject;
+import jely.Ecg;
+import jely.EcgSignal;
+import jely.QrsComplex;
+import jely.filter.LmeFilter;
+import jely.filter.MeanFilter;
+import jely.util.DescriptiveStatistics;
 
 public class PanTompkinsDetector extends QrsDetector {
 
@@ -56,7 +52,7 @@ public class PanTompkinsDetector extends QrsDetector {
 	public static final double diff_b[] = { 2d, 1d, 0d, -1d, -2d };
 	public LmeFilter diff = new LmeFilter(diff_b, diff_a);
 
-	public WndIntFilter wndInt = null;
+	public LmeFilter.WndIntFilter wndInt = null;
 	public MeanFilter wndMean = null;
 
 	public double qrsThreshold = 1d;
@@ -82,20 +78,20 @@ public class PanTompkinsDetector extends QrsDetector {
 
 	// public boolean invalidQrs = false;
 
-	public StatFilter heartRateStats = new StatFilter(3);
-	public StatFilter qrstaStats = new StatFilter(3);
+	public LmeFilter.StatFilter heartRateStats = new LmeFilter.StatFilter(3);
+	public LmeFilter.StatFilter qrstaStats = new LmeFilter.StatFilter(3);
 
 	public MeanFilter rrMeanLong = new MeanFilter(16);
-	public StatFilter rrStats = new StatFilter(8);
+	public LmeFilter.StatFilter rrStats = new LmeFilter.StatFilter(8);
 
-	public PeakDetectionFilter risingPeak = new PeakDetectionFilter(3, 0);
-	public PeakDetectionFilter rPeak = new PeakDetectionFilter(1, 0);
+	public LmeFilter.PeakDetectionFilter risingPeak = new LmeFilter.PeakDetectionFilter(3, 0);
+	public LmeFilter.PeakDetectionFilter rPeak = new LmeFilter.PeakDetectionFilter(1, 0);
 	public int lastBandPeak = 0;
 	public int lastCrossing = 0;
 
-	public MinDetectionFilter qPeak = new MinDetectionFilter(1, 0);
+	public LmeFilter.MinDetectionFilter qPeak = new LmeFilter.MinDetectionFilter(1, 0);
 	// public PeakDetectionFilter sbRPeak = new PeakDetectionFilter( 1, 0 );
-	public MinDetectionFilter sPeak = new MinDetectionFilter(1, 0);
+	public LmeFilter.MinDetectionFilter sPeak = new LmeFilter.MinDetectionFilter(1, 0);
 
 	public int startProcessing = 100;
 
@@ -570,7 +566,7 @@ public class PanTompkinsDetector extends QrsDetector {
 
 		// window integrator width proposed by Pan&Tompkins, 150ms, that is 30 samples @
 		// 200 Hz
-		wndInt = new WndIntFilter(wndLength);
+		wndInt = new LmeFilter.WndIntFilter(wndLength);
 
 		// Log.d( "lme.pants", "sampling: " + samplingRateInHz + " wndLength: " +
 		// wndLength );

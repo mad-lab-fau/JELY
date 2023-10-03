@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.hrv;
+package jely.hrv;
 
-import de.fau.mad.jely.Heartbeat;
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.detectors.HeartbeatDetector;
-import de.fau.mad.jely.detectors.QrsDetector;
-import de.fau.mad.jely.RRInterval;
+
+import jely.Ecg;
+import jely.Heartbeat;
+import jely.RRInterval;
+import jely.detectors.HeartbeatDetector;
 
 import java.util.ArrayList;
 

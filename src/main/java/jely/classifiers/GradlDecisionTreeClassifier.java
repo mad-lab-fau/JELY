@@ -14,18 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.classifiers;
+package jely.classifiers;
 
-import de.fau.mad.jely.QrsComplex;
+import jely.BeatClass;
+import jely.Heartbeat;
+import jely.QrsClass;
+import jely.QrsComplex;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import de.fau.mad.jely.BeatClass;
-import de.fau.mad.jely.Heartbeat;
-import de.fau.mad.jely.QrsClass;
 
 /**
  * Implements the decision tree classifier of Gradl et al. published in the Hearty paper.

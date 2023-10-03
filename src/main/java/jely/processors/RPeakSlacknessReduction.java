@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.processors;
+package jely.processors;
+
+import jely.QrsComplex;
 
 import java.util.Arrays;
-
-import de.fau.mad.jely.QrsComplex;
 
 /**
  * Implements the R peak slackness reduction algorithm according to Gradl et al. [1].

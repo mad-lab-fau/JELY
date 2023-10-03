@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.filter;
+package jely.filter;
+
+import jely.util.DescriptiveStatistics;
 
 import java.util.ArrayList;
-
-import de.fau.mad.jely.util.DescriptiveStatistics;
 
 /**
  * Implements a median filter.

@@ -14,13 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.Ecg;
+import jely.LeadConfiguration;
 
 import java.io.File;
 import java.io.IOException;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.LeadConfiguration;
 
 /**
  * An automated static file loader class that detects the format of the given

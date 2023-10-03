@@ -14,15 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely;
+package jely;
 
-import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-import de.fau.mad.jely.util.DescriptiveStatistics;
-import de.fau.mad.jely.util.DescriptiveStatisticsElement;
-import de.fau.shiftlist.*;
+import de.fau.shiftlist.ShiftListDouble;
+import jely.util.DescriptiveStatistics;
+import jely.util.DescriptiveStatisticsElement;
 
 /**
  * Represents a QRS complex of a heartbeat in an ECG.

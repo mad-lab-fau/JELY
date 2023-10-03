@@ -14,7 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.Ecg;
+import jely.EcgLead;
+import jely.LeadConfiguration;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,10 +29,6 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Locale;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.EcgLead;
-import de.fau.mad.jely.LeadConfiguration;
 
 /**
  * ECG stored as an CSV file.

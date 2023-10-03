@@ -14,15 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely;
+package jely;
 
-// import com.sun.scenario.animation.*;
-
-import de.fau.mad.jely.RRInterval;
-import de.fau.mad.jely.util.SplineInterpolator;
-
-import java.util.ArrayList;
-
+import jely.util.SplineInterpolator;
 
 /**
  * @author Axel Heinrich

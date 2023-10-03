@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely;
+package jely;
 
 import java.util.Collection;
 import java.util.Date;
@@ -22,9 +22,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-import de.fau.mad.jely.detectors.QrsDetector;
-import de.fau.mad.jely.filter.DigitalFilter;
-import de.fau.shiftlist.*;
+import de.fau.shiftlist.ShiftListDouble;
+import jely.filter.DigitalFilter;
 
 /**
  * Represents (part of) a sampled signal from a single channel/lead of an ECG

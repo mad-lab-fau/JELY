@@ -14,7 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.LeadConfiguration;
+import jely.annotations.SubjectInfo;
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
@@ -22,11 +25,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.channels.WritableByteChannel;
 import java.util.Date;
-
-import de.fau.mad.jely.LeadConfiguration;
-import de.fau.mad.jely.annotations.SubjectInfo;
 
 /**
  * A data output stream that lets an application write a binary ecg file.
@@ -89,7 +88,7 @@ public class BinaryEcgFileStream extends BinaryEcgFile {
             firstSampleTimestamp = System.nanoTime();
         }
 
-        BinaryEcgFile.writeHeaderAndAnnotations(this, mOutStream);
+        writeHeaderAndAnnotations(this, mOutStream);
 
         try {
             // write size

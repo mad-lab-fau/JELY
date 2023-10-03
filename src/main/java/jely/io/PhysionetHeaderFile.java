@@ -14,7 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.EcgLead;
+import jely.LeadConfiguration;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,9 +27,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import de.fau.mad.jely.EcgLead;
-import de.fau.mad.jely.LeadConfiguration;
 
 /**
  * Reads and parses a physionet .hea file according to http://www.physionet.org/physiotools/wag/header-5.htm. The

@@ -14,7 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.fau.mad.jely.io;
+package jely.io;
+
+import jely.Ecg;
+import jely.LeadConfiguration;
+import jely.annotations.AnnotationManager;
+import jely.annotations.SubjectInfo;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -29,11 +34,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-import de.fau.mad.jely.Ecg;
-import de.fau.mad.jely.LeadConfiguration;
-import de.fau.mad.jely.annotations.AnnotationManager;
-import de.fau.mad.jely.annotations.SubjectInfo;
 
 /**
  * This class represents an ECG that exists in a binary format on long-term
@@ -152,7 +152,7 @@ public class BinaryEcgFile extends Ecg {
 	}
 
 	protected BinaryEcgFile(double samplingRate, LeadConfiguration leads, SubjectInfo subject,
-			double secondsToKeepInMemory) {
+							double secondsToKeepInMemory) {
 		super(samplingRate, leads, subject, secondsToKeepInMemory);
 	}
 
